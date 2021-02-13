@@ -1,0 +1,109 @@
+/* import font */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.4;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* Navbar */
+
+.text-primary {
+    color: #93cb52;
+}
+
+
+/* Navbar */
+
+#navbar {
+    display: flex;
+    justify-content: space-around;
+    background-color: #333;
+    color: #fff;
+    position: sticky;
+    top: 0;
+    /* Go over navbar */
+    z-index: 1;
+    padding: 1rem;
+}
+
+#navbar ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+
+#navbar ul li a {
+    color: #fff;
+    padding: 10px;
+    margin: 0 5px;
+}
+
+#navbar ul li a:hover {
+    background: #93cb52;
+}
+
+
+/* Showcase */
+
+
+/* End of Showcase */
+
+
+/* Main Contant */
+
+#content {
+    max-width: 960px;
+    margin: auto;
+}
+
+.container {
+    margin-top: 7rem;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-gap: 1rem;
+}
+
+#product {
+    border: solid 1px #333;
+    padding: 1rem;
+    text-align: center;
+    color: #fff;
+    background: #333;
+    border-radius: 1rem;
+}
+
+#product img {
+    border: solid 3px #fff;
+}
+
+.btn {
+    border-radius: 1px;
+    background: #93cb52;
+    padding: 0.5rem;
+    color: #fff;
+}
+
+
+/* End of main content  */
+
+
+/* Footer */
+
+#footer {
+    padding: 1rem 0;
+    background: #333;
+    color: #fff;
+    text-align: center;
+}

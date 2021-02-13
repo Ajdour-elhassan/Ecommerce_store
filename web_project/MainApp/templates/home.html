@@ -1,0 +1,57 @@
+ {% extends 'base.html' %} {% load static %}
+<!-- Block title -->
+{% block title %} Welcome - Enjoy Shopping {% endblock title %}
+<!-- Ende Block title -->
+{% block content %}
+
+<!-- Main Content -->
+<header id="content">
+    <div class="container">
+        <div id="product">
+            <img src="{% static 'img/macbook.jpg' %}" alt="product" style="width:200px">
+            <h3>Macbook Pro</h3>
+            <p>$99.99</p>
+            <br>
+            <a class="btn" href="#">Buy Now</a>
+        </div>
+        <div id="product">
+            <img src="{% static 'img/camera.jpg'  %}" alt="product" style="width:200px">
+            <h3>Camera</h3>
+            <p>$99.99</p>
+            <br>
+            <a class="btn" href="#">Buy Now</a>
+        </div>
+        <div id="product">
+            <img src="{% static 'img/phone.jpg' %}" alt="product" style="width:200px">
+            <h3>Mobile Phone</h3>
+            <p>$99.99</p>
+            <br>
+            <a class="btn" href="#">Buy Now</a>
+        </div>
+        <div id="product">
+            <img src="{% static 'img/phone.jpg' %}" alt="product" style="width:200px">
+            <h3>Mobile Phone</h3>
+            <p>$99.99</p>
+            <br>
+            <a class="btn" href="#">Buy Now</a>
+        </div>
+        <div id="product">
+            <img src="{% static 'img/phone.jpg' %}" alt="product" style="width:200px">
+            <h3>Mobile Phone</h3>
+            <p>$99.99</p>
+            <br>
+            <a class="btn" href="#">Buy Now</a>
+        </div>
+        <div id="product">
+            <img src="{% static 'img/phone.jpg' %}" alt="product" style="width:200px">
+            <h3>Mobile Phone</h3>
+            <p>$99.99</p>
+            <br>
+            <a class="btn" href="#">Buy Now</a>
+        </div>
+    </div>
+</header>
+<!-- Main Content -->
+
+
+{% endblock content %}
