@@ -1,0 +1,28 @@
+{% extends 'base.html' %} {% load static %}
+<!-- Title -->
+{% block title %} Browse Product {% endblock title %}
+<!-- End of Title -->
+
+{% block content %}
+<!-- Product description -->
+<h1 id="heading-l"><span class="text-primary"> Product </span> Detail </h1>
+<header class="product-detail container">
+    <div id="grid">
+        <div class="image-product">
+            <img src="{{product_detail.image.url}}" alt="product-image" style="width:300px">
+        </div>
+        <div class="description">
+            <h3> {{product_detail.name}} </h3>
+            <h4> <span class="text-primary"> Price : </span> ${{product_detail.price}} </h4>
+            <h4>More Details :</h4>
+            <p> {{product_detail.description }} </p>
+            <section id="btns">
+                <a class="btn" href="#">Add To Card</a>
+                <a class="btn" href="#">Buy Now</a>
+            </section>
+        </div>
+    </div>
+</header>
+<!-- End of Product description -->
+
+{% endblock content %}

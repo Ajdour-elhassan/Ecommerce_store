@@ -11,29 +11,32 @@
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <link rel="stylesheet" href="{% static 'css/mobile.css' %}">
 
-    <title> Shopyhome | {% block title %} {% endblock title%} </title>
+    <title> Shopyhome | {% block title %} {% endblock title %} </title>
 
     <link rel="icon" type="image/png" href="{% static 'img/camera.jpg' %}">
 
 </head>
 
 <body>
-    <!-- Navbar -->
-    {% include 'partials/navbar.html' %}
-    <!-- End of  Navbar -->
 
-    <!-- Main Content -->
-    {% block content %} {% endblock content %}
-    <!-- Main Content -->
+    <section id="store">
 
-    <br><br><br><br><br><br><br><br><br><br><br><br>
+        <!-- Navbar -->
+        {% include 'partials/navbar.html' %}
+        <!-- End of  Navbar -->
 
+        <!-- Main Content -->
+        {% block content %} {% endblock content %}
+        <!-- Main Content -->
+
+    </section>
     <!-- Footer -->
     {% include 'partials/footer.html' %}
     <!-- Endo of Footer -->
 
 
     <!-- Script JS -->
+    <script src="https://unpkg.com/vue@next" defer></script>
     <script src="{% static 'js/main.js' %}"></script>
     <!-- End of Scripts js -->
 </body>

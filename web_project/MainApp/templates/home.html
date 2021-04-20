@@ -3,55 +3,69 @@
 {% block title %} Welcome - Enjoy Shopping {% endblock title %}
 <!-- Ende Block title -->
 {% block content %}
-
+<h1 id="heading-l"><span class="text-primary"> All </span> Products </h1>
 <!-- Main Content -->
-<header id="content">
-    <div class="container">
+<header class="container">
+    <div id="content">
+        {% for product in products %}
         <div id="product">
-            <img src="{% static 'img/macbook.jpg' %}" alt="product" style="width:200px">
-            <h3>Macbook Pro</h3>
-            <p>$99.99</p>
+            <img src="{{product.image.url}}" alt="product" style="width:200px;">
+            <h3> {{product.name}} </h3>
+            <p>$ {{product.price}} </p>
             <br>
-            <a class="btn" href="#">Buy Now</a>
+            <a class="btn" href="{{product.get_url}}">Buy Now</a>
         </div>
-        <div id="product">
-            <img src="{% static 'img/camera.jpg'  %}" alt="product" style="width:200px">
-            <h3>Camera</h3>
-            <p>$99.99</p>
-            <br>
-            <a class="btn" href="#">Buy Now</a>
-        </div>
-        <div id="product">
-            <img src="{% static 'img/phone.jpg' %}" alt="product" style="width:200px">
-            <h3>Mobile Phone</h3>
-            <p>$99.99</p>
-            <br>
-            <a class="btn" href="#">Buy Now</a>
-        </div>
-        <div id="product">
-            <img src="{% static 'img/phone.jpg' %}" alt="product" style="width:200px">
-            <h3>Mobile Phone</h3>
-            <p>$99.99</p>
-            <br>
-            <a class="btn" href="#">Buy Now</a>
-        </div>
-        <div id="product">
-            <img src="{% static 'img/phone.jpg' %}" alt="product" style="width:200px">
-            <h3>Mobile Phone</h3>
-            <p>$99.99</p>
-            <br>
-            <a class="btn" href="#">Buy Now</a>
-        </div>
-        <div id="product">
-            <img src="{% static 'img/phone.jpg' %}" alt="product" style="width:200px">
-            <h3>Mobile Phone</h3>
-            <p>$99.99</p>
-            <br>
-            <a class="btn" href="#">Buy Now</a>
-        </div>
+        {% endfor %}
     </div>
 </header>
 <!-- Main Content -->
+<!-- Popular -->
+<h1 id="heading-l"><span class="text-primary"> Popular </span> Products </h1>
+<header class="container">
+    <div id="content">
+        {% for product in products %}
+        <div id="product">
+            <img src="{{product.image.url}}" alt="product" style="width:200px;">
+            <h3> {{product.name}} </h3>
+            <p>$ {{product.price}} </p>
+            <br>
+            <a class="btn" href="{{product.get_url}}">Buy Now</a>
+        </div>
+        {% endfor %}
+    </div>
+</header>
+<!-- Clothes Products -->
+<h1 id="heading-l"><span class="text-primary"> Clothes </span> Products </h1>
+<header class="container">
+    <div id="content">
+        {% for product in products %}
+        <div id="product">
+            <img src="{{product.image.url}}" alt="product" style="width:200px;">
+            <h3> {{product.name}} </h3>
+            <p>$ {{product.price}} </p>
+            <br>
+            <a class="btn" href="{{product.get_url}}">Buy Now</a>
+        </div>
+        {% endfor %}
+    </div>
+</header>
+<!-- Accesoirces Products -->
+<h1 id="heading-l"><span class="text-primary"> Accsesoirces </span> Products </h1>
+<header class="container">
+    <div id="content">
+        {% for product in products %}
+        <div id="product">
+            <img src="{{product.image.url}}" alt="product" style="width:200px;">
+            <h3> {{product.name}} </h3>
+            <p> ${{product.price}} </p>
+            <br>
+            <a class="btn" href="{{product.get_url}}">Buy Now</a>
+        </div>
+        {% endfor %}
+    </div>
+</header>
+
+
 
 
 {% endblock content %}
