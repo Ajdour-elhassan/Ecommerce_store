@@ -278,7 +278,7 @@
         "kind": 6,
         "importPath": "web_project.MainApp.models",
         "description": "web_project.MainApp.models",
-        "peekOfCode": "class Cart (models.Model) :\n    cart_id = models.CharField(max_length=250, blank=True)\n    date_added = models.DateField(auto_now_add=True)\n    class Meta :\n        db_table = 'Cart'\n        ordering = ['date_added']\n    def __str__(self) :\n        return self.cart_id\nclass CartItem (models.Model) :\n    product = models.ForeignKey(Product, on_delete=models.CASCADE)",
+        "peekOfCode": "class Cart (models.Model) :\n    cart_id = models.CharField(max_length=250, blank=True)\n    date_added = models.DateField(auto_now_add=True)\n    class Meta :\n        db_table = 'Cart'\n        ordering = ['date_added']\n    def __str__(self) :\n        return self.cart_id\nclass CartItem (models.Model) :\n    cart = models.ForeignKey(Cart, on_delete=models.CASCADE)",
         "detail": "web_project.MainApp.models",
         "documentation": {}
     },
@@ -287,7 +287,7 @@
         "kind": 6,
         "importPath": "web_project.MainApp.models",
         "description": "web_project.MainApp.models",
-        "peekOfCode": "class CartItem (models.Model) :\n    product = models.ForeignKey(Product, on_delete=models.CASCADE)\n    cart = models.ForeignKey(Cart, on_delete=models.CASCADE)\n    quantity = models.IntegerField()\n    active = models.BooleanField(default=True)\n    class Meta :\n        db_table = 'CartItem'\n    def sub_total(self) :\n        return self.product.price * self.quantity\n    def __str__(self) :",
+        "peekOfCode": "class CartItem (models.Model) :\n    cart = models.ForeignKey(Cart, on_delete=models.CASCADE)\n    product = models.ForeignKey(Product, on_delete=models.CASCADE)\n    quantity = models.IntegerField()\n    active = models.BooleanField(default=True)\n    class Meta :\n        db_table = 'CartItem'\n    def sub_total(self) :\n        return self.product.price * self.quantity\n    def __str__(self) :",
         "detail": "web_project.MainApp.models",
         "documentation": {}
     },
