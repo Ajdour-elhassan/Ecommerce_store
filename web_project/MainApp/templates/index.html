@@ -1,0 +1,147 @@
+{% extends 'base.html' %} {% load static %}
+<!-- Title -->
+{% block title %} Home {% endblock title %} {% block content %}
+
+<!-- SHOWCASE -->
+<section class="home-section">
+  <div class="home-content">
+    <h3>
+      We Help You to Achieve Your Goals & Growing-up your Business Online .
+    </h3>
+    <p>
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quibusdam harum
+      in, ratione voluptas odio sit, officia quia rem ex voluptate autem
+      cupiditate! Voluptates maiores quia, laudantium rem optio deserunt? Nam.
+    </p>
+    <a class="btn" href=""> Start Now</a>
+  </div>
+  <img src="{% static "images/homeee.jpg" %}" class="home-image" alt="" />
+</section>
+
+<!-- SERVICE -->
+<section class="services">
+  <h2 class="header-part">
+    ALL
+    <span class="header-primary"> SERVICES </span>
+  </h2>
+  <div class="background">
+    <div class="service container">
+      {% for service in services %}
+      <div class="card">
+        <img src="{{service.image.url}}" alt="" />
+        <br />
+        <h2>{{service.name}}</h2>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- WORKS -->
+<section class="works">
+  <h2 class="header-part">
+    ALL WORKS &
+    <span class="header-primary"> PORTFLIO </span>
+  </h2>
+  <div class="background1">
+    <div class="work container">
+      {% for work in works %}
+      <div class="card">
+        <img src="{{work.image.url}}" alt="" />
+        <h2>{{work.name}}</h2>
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Pariatur,
+          maxime a inventore esse eum soluta quas sed quis deserunt magni
+          veritatis ipsam tenetur enim fugit voluptatem corrupti cum, culpa
+          sequi?
+        </p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- OUT TEAMS -->
+
+<section class="team">
+  <h2 class="header-part">
+    OUR
+    <span class="header-primary"> TEAMS </span> & Players
+  </h2>
+  <div class="teams container">
+    <div class="card">
+      {% for team in teams %}
+      <div>
+        <img src="{{team.image.url}}" alt="" />
+        <h2>{{team.name}}</h2>
+        <p>{{team.description}}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- WHAT OUR CLIEN SAYS ABOUT US -->
+
+<section class="clients">
+  <h2 class="header-part">
+    LOOK AT WHAT OUR
+    <span class="header-primary"> CLIENTS </span> SAYS ABOUT US
+  </h2>
+  <div class="client container">
+    {% for feed in feedback %}
+    <div class="card">
+      <div>
+        <img src="{{feed.image.url}}" alt="" />
+        <h2>{{feed.name}}</h2>
+      </div>
+      <p>"{{feed.description}}"</p>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contacts">
+  <div class="contact container">
+    <div class="form-contact">
+      <div>
+        <h3>CONTACT US</h3>
+        <p>
+          Please fill in this form in order to contact , be free to express your
+          inquiry , by the time you we submit your message , we will contact you
+          .
+        </p>
+      </div>
+      <div class="form-control">
+        <label for="Name"> NAME : </label>
+        <input type="text" placeholder="NAME" required />
+      </div>
+      <div class="form-control">
+        <label for="Email"> EMAIL : </label>
+        <input type="text" placeholder="Email" required />
+      </div>
+      <div class="form-control">
+        <label for="Name"> PHONE : </label>
+        <input type="text" placeholder="PHONE NUMBER" required />
+      </div>
+      <div class="form-control">
+        <label for="Name"> MESSAGE : </label>
+        <textarea name="message" placeholder="MESSAGE"></textarea>
+      </div>
+      <div class="form-control">
+        <a class="btn" href=""> Submit</a>
+      </div>
+    </div>
+    <div class="info-form">
+      <h4>
+        <i class="fas fa-map-marker-alt"></i> Sale-Rabat-Knitra 1100 , Moroccco
+        .
+      </h4>
+      <h4><i class="fas fa-at"></i> Diesefive@gmail.com</h4>
+      <h4><i class="fas fa-phone"></i> +212628163681</h4>
+    </div>
+  </div>
+</section>
+
+{% endblock content %}

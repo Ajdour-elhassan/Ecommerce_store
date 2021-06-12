@@ -1,43 +1,32 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta email="desciption" content=" Shopyhome | Ecommerce & investment Company ">
-    <meta email="keywords" content=" Shopyhome , Ecommerce , Buy , Financial , Alkarat , Accounting & investment company ">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
-    <link rel="stylesheet" href="{% static 'css/mobile.css' %}">
-
-    <title> Shopyhome | {% block title %} {% endblock title %} </title>
-
-    <link rel="icon" type="image/png" href="{% static 'img/camera.jpg' %}">
-
-</head>
-
-<body>
-
-    <section id="store">
-
-        <!-- Navbar -->
-        {% include 'partials/navbar.html' %}
-        <!-- End of  Navbar -->
-
-        <!-- Main Content -->
-        {% block content %} {% endblock content %}
-        <!-- Main Content -->
-
-    </section>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+      integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/mobile.css' %} " />
+    <title>
+      DiesfievDigital Agency | {% block title %} {% endblock title %}
+    </title>
+  </head>
+  <body>
+    <!-- Navbar -->
+    {% include './partials/navbar.html' %}
+    <!--  -->
+    <!--  End of Navbar  -->
+    {% block content %} {% endblock content %}
     <!-- Footer -->
-    {% include 'partials/footer.html' %}
-    <!-- Endo of Footer -->
 
-    <!-- Script JS -->
-    <script src="https://unpkg.com/vue@next" defer></script>
+    {% include './partials/footer.html' %}
+
     <script src="{% static 'js/main.js' %}"></script>
-    <!-- End of Scripts js -->
-</body>
-
+  </body>
 </html>

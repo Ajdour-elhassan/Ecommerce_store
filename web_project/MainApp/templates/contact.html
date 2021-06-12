@@ -1,0 +1,68 @@
+{% extends 'base.html' %} {% load static %}
+<!-- Title -->
+{% block title %} Contact us! {% endblock title %}
+<!-- Contact -->
+{% block content %}
+
+
+ 
+<!-- SHOWCASE -->
+<section class="home-section">
+  <div class="home-content">
+    <h3>
+      We Help You to Achieve Your Goals & Growing-up your Business Online .
+    </h3>
+    <p>
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quibusdam harum
+      in, ratione voluptas odio sit, officia quia rem ex voluptate autem
+      cupiditate! Voluptates maiores quia, laudantium rem optio deserunt? Nam.
+    </p>
+    <a class="btn" href=""> Start Now</a>
+  </div>
+  <img src="{% static "images/homeee.jpg" %}" class="home-image" alt="" />
+</section>
+
+    <!-- CONTACT -->
+    <section class="contacts">
+      <div class="contact container">
+        <div class="form-contact">
+          <div>
+            <h3> CONTACT US </h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati
+              quasi officia nam. Qui non neque delectus odio error ratione sed
+              modi. Voluptates fuga at ut tenetur facilis eum tempore odit.
+            </p>
+          </div>
+          <div class="form-control">
+            <label for="Name"> NAME : </label>
+            <input type="text" placeholder="NAME" required />
+          </div>
+          <div class="form-control">
+            <label for="Email"> EMAIL : </label>
+            <input type="text" placeholder="Email" required />
+          </div>
+          <div class="form-control">
+            <label for="Name"> PHONE : </label>
+            <input type="text" placeholder="PHONE NUMBER" required />
+          </div>
+          <div class="form-control">
+            <label for="Name"> MESSAGE : </label>
+            <textarea name="message" placeholder="MESSAGE"></textarea>
+          </div>
+          <div class="form-control">
+            <a class="btn" href=""> Submit</a>
+          </div>
+        </div>
+        <div class="info-form">
+          <h4>
+            <i class="fas fa-map-marker-alt"></i> Sale-Rabat-Knitra 1100 ,
+            Moroccco .
+          </h4>
+          <h4><i class="fas fa-at"></i> Diesefive@gmail.com</h4>
+          <h4><i class="fas fa-phone"></i> +212628163681</h4>
+        </div>
+      </div>
+    </section
+
+{% endblock content %}

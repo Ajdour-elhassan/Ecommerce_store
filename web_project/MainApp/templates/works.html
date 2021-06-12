@@ -1,0 +1,47 @@
+{% extends 'base.html' %} {% load static %}
+<!-- Title -->
+{% block title %} Enjoy New Products! {% endblock title %}
+<!-- Content -->
+{% block content %}
+
+<!-- SHOWCASE -->
+<section class="home-section">
+  <div class="home-content">
+    <h3>
+      We Help You to Achieve Your Goals & Growing-up your Business Online .
+    </h3>
+    <p>
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quibusdam harum
+      in, ratione voluptas odio sit, officia quia rem ex voluptate autem
+      cupiditate! Voluptates maiores quia, laudantium rem optio deserunt? Nam.
+    </p>
+    <a class="btn" href=""> Start Now</a>
+  </div>
+  <img src="{% static "images/homeee.jpg" %}" class="home-image" alt="" />
+</section>
+
+<!-- WORKS -->
+<section class="works">
+  <h2 class="header-part">
+    ALL WORKS &
+    <span class="header-primary"> PORTFLIO </span>
+  </h2>
+  <div class="background1">
+    <div class="work container">
+      {% for work in works %}
+      <div class="card">
+        <img src="{{work.image.url}}" alt="" />
+        <h2>{{work.name}}</h2>
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Pariatur,
+          maxime a inventore esse eum soluta quas sed quis deserunt magni
+          veritatis ipsam tenetur enim fugit voluptatem corrupti cum, culpa
+          sequi?
+        </p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{% endblock content %}

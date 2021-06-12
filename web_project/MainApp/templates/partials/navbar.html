@@ -1,19 +1,19 @@
 {% load static %}
 <!-- Navbar -->
-<nav id="navbar">
-    <div>
-        <h3 class="logo">
-            <span class="text-primary"> <i class="fas fa-store"></i> Shopy</span> Home
-        </h3>
-    </div>
-    <div>
-        <ul>
-            <li><a href="{% url 'home' %}">Product</a></li>
-            <li><a href="{% url 'home' %}">Category</a></li>
-            <li>
-                <a href="{% url 'cart' %}"> <i class="fas fa-cart-arrow-down"></i> Card (5) </a>
-            </li>
-        </ul>
-    </div>
-</nav>
-<!-- End of  Navbar -->
+<header class="navbar">
+  <div class="logo">
+    <h2 class="header-thirdly">
+      Diesefive<span class="header-secondary">Digital</span> Agency
+    </h2>
+  </div>
+  <div class="toggle"></div>
+  <div class="navigation">
+    <ul>
+      <li><a href="{% url 'home' %}"> HOME </a></li>
+      <li><a href="{% url 'services' %}"> SERVICE </a></li>
+      <li><a href="{% url 'works' %}"> WORKS </a></li>
+      <li><a href="{% url 'about' %}"> ABOUT </a></li>
+      <li><a href="{% url 'contact' %}"> CONTACT </a></li>
+    </ul>
+  </div>
+</header>
